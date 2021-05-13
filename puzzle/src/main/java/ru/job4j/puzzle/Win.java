@@ -11,25 +11,25 @@ public class Win {
         return rsl;
     }
 
-    public static boolean monoGorizont(int[][] board, int column) {
-        boolean a = true;
+    public static boolean monoGorizont(int[][] board, int row) {
+        boolean rsl = true;
         for (int i = 0; i < board.length; i++) {
-            if(board[i][column] != 1){
-                a = false;
+            if(board[i][row] != 1){
+                rsl = false;
                 break;
             }
         }
-        return a;
+        return rsl;
     }
 
     public static boolean monoVertical(int[][] board, int column) {
-        boolean a = true;
+        boolean rsl = true;
         for (int i = 0; i < board.length; i++) {
             if(board[column][i] != 1){
-                a = false;
+                rsl = false;
                 break;
             }
         }
-        return a;
+        return rsl;
     }
 }
