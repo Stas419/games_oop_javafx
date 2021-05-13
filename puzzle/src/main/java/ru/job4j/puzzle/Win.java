@@ -4,17 +4,17 @@ public class Win {
     public static boolean check(int[][] board) {
         boolean rsl = false;
         for (int i = 0; i < board.length; i++) {
-            if(board[i][i] == 1 && gorizont(board, i) || vertical(board, i)){
+            if(board[i][i] == 1 && (monoGorizont(board, i) || monoVertical(board, i))){
                 rsl = true ;
             }
         }
         return rsl;
     }
 
-    public static boolean gorizont(int[][] board, int x) {
+    public static boolean monoGorizont(int[][] board, int column) {
         boolean a = true;
         for (int i = 0; i < board.length; i++) {
-            if(board[i][x] != 1){
+            if(board[i][column] != 1){
                 a = false;
                 break;
             }
@@ -22,10 +22,10 @@ public class Win {
         return a;
     }
 
-    public static boolean vertical(int[][] board, int x) {
+    public static boolean monoVertical(int[][] board, int column) {
         boolean a = true;
         for (int i = 0; i < board.length; i++) {
-            if(board[x][i] != 1){
+            if(board[column][i] != 1){
                 a = false;
                 break;
             }
