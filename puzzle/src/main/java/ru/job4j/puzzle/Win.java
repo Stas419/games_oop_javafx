@@ -6,12 +6,13 @@ public class Win {
         for (int i = 0; i < board.length; i++) {
             if(board[i][i] == 1 && (monoGorizont(board, i) || monoVertical(board, i))){
                 rsl = true ;
+                break;
             }
         }
         return rsl;
     }
 
-    public static boolean monoGorizont(int[][] board, int row) {
+    public static boolean monoVertical(int[][] board, int row) {
         boolean rsl = true;
         for (int i = 0; i < board.length; i++) {
             if(board[i][row] != 1){
@@ -22,7 +23,7 @@ public class Win {
         return rsl;
     }
 
-    public static boolean monoVertical(int[][] board, int column) {
+    public static boolean monoGorizont(int[][] board, int column) {
         boolean rsl = true;
         for (int i = 0; i < board.length; i++) {
             if(board[column][i] != 1){
